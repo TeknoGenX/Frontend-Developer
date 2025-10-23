@@ -1,0 +1,188 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #007bff;
+    /* Biru */
+    --primary-hover: #0056b3;
+    --dark-color: #222;
+    --light-color: #f9f9f9;
+    --text-color: #555;
+    --section-padding: 4rem 2rem;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #fff;
+    color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+section {
+    padding: var(--section-padding);
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* --- Header & Navigasi --- */
+header {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    /* Membuat header tetap di atas saat scroll */
+    top: 0;
+    z-index: 10;
+}
+
+header nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-link {
+    margin-left: 1rem;
+    font-weight: 600;
+}
+
+/* --- Tombol CTA (Call to Action) --- */
+.cta-button {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.8rem 1.8rem;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background: var(--primary-hover);
+}
+
+/* --- Bagian Hero --- */
+.hero {
+    background-color: var(--light-color);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 1rem auto 2rem auto;
+}
+
+/* --- Bagian Fitur --- */
+.feature-grid {
+    display: grid;
+    /* Membuat 3 kolom di layar besar, 1 kolom di layar kecil */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    text-align: left;
+}
+
+.feature-item {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    border-top: 4px solid var(--primary-color);
+}
+
+/* --- Bagian CTA Bawah --- */
+.cta {
+    background-color: var(--dark-color);
+    color: #eee;
+}
+
+.cta h2 {
+    color: #fff;
+}
+
+.signup-form {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.signup-form input[type="email"] {
+    padding: 0.8rem;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--light-color);
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* --- Responsif (Untuk HP) --- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .signup-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .signup-form input[type="email"] {
+        width: 90%;
+    }
+}
