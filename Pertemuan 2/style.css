@@ -1,0 +1,101 @@
+/* Aturan dasar dan Latar Belakang Halaman */
+* {
+    box-sizing: border-box;
+    /* Membuat padding tidak menambah lebar elemen */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    /* Latar belakang abu-abu muda */
+    display: flex;
+    /* Menggunakan flexbox */
+    justify-content: center;
+    /* Menengahkan secara horizontal */
+    align-items: center;
+    /* Menengahkan secara vertikal */
+    min-height: 100vh;
+    /* Tinggi minimal 100% viewport */
+    margin: 0;
+}
+
+/* Kontainer Utama Form (Card) */
+.register-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    /* Sudut melengkung */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Bayangan halus */
+    width: 100%;
+    max-width: 400px;
+    /* Lebar maksimum form */
+}
+
+/* Judul Form */
+.register-form h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+/* Grup Form (Label + Input) */
+.form-group {
+    margin-bottom: 1rem;
+    /* Jarak antar grup */
+}
+
+/* Label */
+.form-group label {
+    display: block;
+    /* Label berada di atas input */
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #555;
+}
+
+/* Input Fields (Nama, Email, Password) */
+.form-group input {
+    width: 100%;
+    /* Lebar penuh */
+    padding: 0.75rem;
+    /* Padding di dalam input */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Efek saat input di-klik (focus) */
+.form-group input:focus {
+    outline: none;
+    /* Hilangkan outline default */
+    border-color: #007bff;
+    /* Ganti warna border */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+    /* Beri efek 'glow' */
+}
+
+/* Tombol Submit */
+.submit-btn {
+    width: 100%;
+    /* Lebar penuh */
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    /* Warna primer (biru) */
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    /* Ubah kursor jadi tangan */
+    transition: background-color 0.3s ease;
+    /* Efek transisi saat hover */
+}
+
+/* Efek saat tombol di-hover */
+.submit-btn:hover {
+    background-color: #0056b3;
+    /* Warna biru lebih gelap */
+}
