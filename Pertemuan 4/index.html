@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container-flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .kartu {
+            flex: 1 1 30%;
+            margin: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .kartu img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .tombol {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Koleksi Populer</h2>
+
+    <div class="container-flex">
+
+        <div class="kartu">
+            <img src="IMG/png-transparent-c-logo-the-c-programming-language-computer-icons-computer-programming-source-code-programming-miscellaneous-template-blue-thumbnail.png" alt="Gambar Konten">
+            <h3>Judul Film/Berita 1</h3>
+            <p>Deskripsi singkat tentang item ini. Bisa berupa sinopsis film, bahan makanan, atau cuplikan berita.</p>
+            <a href="#" class="tombol">Baca Selengkapnya</a>
+        </div>
+
+        <div class="kartu">
+            <img src="IMG/bahasa-pemrograman-php-1024x553.webp" alt="Gambar Konten">
+            <h3>Judul Film/Berita 2</h3>
+            <p>Deskripsi singkat tentang item ini. Ini adalah contoh kartu kedua dalam tata letak flexbox.</p>
+            <a href="#" class="tombol">Baca Selengkapnya</a>
+        </div>
+
+        <div class="kartu">
+            <img src="IMG/png-clipart-python-programming-language-computer-programming-language-angle-text-thumbnail.png" alt="Gambar Konten">
+            <h3>Judul Film/Berita 3</h3>
+            <p>Kartu ketiga. Perhatikan bagaimana semua kartu memiliki tinggi yang sama secara otomatis.</p>
+            <a href="#" class="tombol">Baca Selengkapnya</a>
+        </div>
+
+        <div class="kartu">
+            <img src="IMG/62ebce3579f6ec7ad46cd466_r programming.jpg" alt="Gambar Konten">
+            <h3>Judul Film/Berita 4</h3>
+            <p>Anda bisa menambahkan sebanyak mungkin kartu yang Anda mau, dan mereka akan otomatis pindah ke baris baru.</p>
+            <a href="#" class="tombol">Baca Selengkapnya</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

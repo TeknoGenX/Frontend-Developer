@@ -1,0 +1,88 @@
+/* Pengaturan dasar untuk halaman */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* =================================
+   BAGIAN UTAMA FLEXBOX 
+   ================================= */
+
+/* 1. Container (Induk/Pembungkus) */
+.container-flex {
+    display: flex;         /* <-- Kunci #1: Mengaktifkan Flexbox */
+    flex-wrap: wrap;       /* <-- Kunci #2: Izinkan item pindah ke baris baru */
+    gap: 20px;             /* <-- Kunci #3: Memberi jarak (gutter) antar kartu */
+    
+    /* (Opsional) Pusatkan kartu jika ada ruang sisa */
+    justify-content: center; 
+}
+
+/* 2. Item (Anak/Kartu) */
+.kartu {
+    /* * Ini adalah properti flex yang paling penting:
+     * flex: 1 1 300px;
+     * Artinya:
+     * - flex-grow: 1    (Boleh membesar untuk mengisi ruang sisa)
+     * - flex-shrink: 1  (Boleh mengecil jika ruang sempit)
+     * - flex-basis: 300px (Ukuran ideal kartu adalah 300px)
+     */
+    flex: 1 1 300px;
+
+    /* Styling agar terlihat cantik */
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Agar gambar tidak keluar dari border-radius */
+    
+    /* (Opsional) Membuat layout di dalam kartu juga flex */
+    display: flex;
+    flex-direction: column;
+}
+
+/* 3. Styling Konten di dalam Kartu */
+.kartu img {
+    width: 100%;       /* Membuat gambar responsif */
+    height: auto;      /* Menjaga rasio aspek gambar */
+}
+
+.kartu h3 {
+    font-size: 1.25rem;
+    color: #333;
+    padding: 16px 16px 0 16px;
+    margin: 0;
+}
+
+.kartu p {
+    font-size: 0.9rem;
+    color: #666;
+    padding: 8px 16px 16px 16px;
+    line-height: 1.5;
+    
+    /* (Opsional) Membuat deskripsi mengisi sisa ruang */
+    flex-grow: 1; 
+}
+
+.kartu .tombol {
+    display: block;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    text-align: center;
+    margin: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.kartu .tombol:hover {
+    background-color: #0056b3;
+}
